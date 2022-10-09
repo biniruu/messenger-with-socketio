@@ -21,4 +21,9 @@ interface SocketData {
   currentRoom: string
 }
 
-export { ServerToClientEvents, ClientToServerEvents, InterServerEvents, SocketData }
+interface Data {
+  username: string
+  message: string
+}
+
+export { ServerToClientEvents, ClientToServerEvents, InterServerEvents, SocketData, Data }

@@ -1,4 +1,4 @@
-import type { ClientToServerEvents, InterServerEvents, ServerToClientEvents, SocketData } from './types/socket'
+import type { ClientToServerEvents, Data, InterServerEvents, ServerToClientEvents, SocketData } from './types/socket'
 
 import { Server } from 'socket.io'
 import cors from 'cors'
@@ -8,13 +8,22 @@ import http from 'http'
 const app = express()
 const server = http.createServer(app)
 
-app.use(express.static('public'))
-
-app.use(express.json())
 app.use(cors())
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const io = new Server<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>(server)
+
+io.on('connection', socket => {
+  console.log('connected🚀')
+
+  socket.on('sendMessage', (data: Data) => {
+    console.log(data)
+  })
+
+  socket.on('disconnect', () => {
+    console.log('disconnected👋🏻')
+  })
+})
 
 server.listen(8000, () => {
   // eslint-disable-next-line no-console
