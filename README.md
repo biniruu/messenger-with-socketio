@@ -1,6 +1,6 @@
-# Messenger App with Socket.io
+# Messenger app with Socket.io
 
-## Technologies Used
+## Technologies used
 
 ### Client
 

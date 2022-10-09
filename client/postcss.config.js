@@ -1,8 +1,12 @@
 module.exports = {
-  syntax: 'postcss-scss',
+  // syntax: 'postcss-scss',
   plugins: {
     autoprefixer: {},
-    'postcss-nested': {},
+    'postcss-preset-env': {
+      features: {
+        'nesting-rules': true,
+      },
+    },
     tailwindcss: {},
   },
 }
