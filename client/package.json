@@ -35,7 +35,6 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
-    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/lodash-es": "^4.17.6",
     "@types/postcss-preset-env": "^7.7.0",
     "@types/react": "^18.0.0",

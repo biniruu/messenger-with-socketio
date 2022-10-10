@@ -1,11 +1,5 @@
 module.exports = {
   extends: ['stylelint-config-prettier', 'stylelint-config-standard'],
-  overrides: [
-    {
-      files: ['**/*.{html,jsx,svg,tsx,ts}'],
-      customSyntax: '@stylelint/postcss-css-in-js',
-    },
-  ],
   plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
     'alpha-value-notation': 'number',
