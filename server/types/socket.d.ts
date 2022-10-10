@@ -22,8 +22,8 @@ interface SocketData {
 }
 
 interface Data {
-  username: string
-  message: string
+  username: Username
+  message: Message
 }
 
 export { ServerToClientEvents, ClientToServerEvents, InterServerEvents, SocketData, Data }
