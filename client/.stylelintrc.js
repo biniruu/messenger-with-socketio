@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['stylelint-config-prettier', 'stylelint-config-standard'],
   plugins: ['stylelint-scss', 'stylelint-order'],
+  customSyntax: 'postcss-html',
   rules: {
     'alpha-value-notation': 'number',
     'at-rule-empty-line-before': [
